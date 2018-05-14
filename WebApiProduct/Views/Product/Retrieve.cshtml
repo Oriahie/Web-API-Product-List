@@ -1,0 +1,45 @@
+﻿@model IEnumerable<WebApiProduct.Models.Products>
+
+@{
+    ViewBag.Title = "Retrieve";
+}
+
+<h2>Product List</h2>
+
+
+@foreach (var item in Model)
+{
+    <table class="table">
+        <tr>
+            <th>
+                id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Price
+            </th>
+        </tr>
+
+        <tr>
+            <td>
+                @item.Id
+            </td>
+            <td>
+                @item.Name
+            </td>
+            <td>
+                @item.Description
+            </td>
+            <td>
+                @item.Price
+            </td>
+        </tr>
+
+
+    </table>
+}
